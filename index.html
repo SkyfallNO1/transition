@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotateX(0deg) rotateY(0deg)
+            }
+            to {
+                transform: rotateX(360deg) rotateY(360deg)
+            }
+        }
+
+        #scene {
+            width: 400px;
+            height: 400px;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            margin:auto auto;
+            perspective: 1000px;
+        }
+
+        .demo {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            margin: 50px;
+            animation: rotate 5s linear infinite;
+            transform-style: preserve-3d;
+        }
+
+        .inner {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 250px;
+            height: 250px;
+            opacity: .5;
+        }
+        h5{
+            display: block;
+            margin-top: 100px;
+            font-size: 50px;
+        }
+
+        .inner:nth-child(1) {
+            background: #ff5763;
+            transform: translateX(125px) rotateY(90deg);
+        }
+
+        .inner:nth-child(2) {
+            background: #4152ff;
+            transform: translateX(-125px) rotateY(90deg);
+        }
+
+        .inner:nth-child(3) {
+            background: #42ffec;
+            transform: translateY(125px) rotateX(90deg);
+        }
+
+        .inner:nth-child(4) {
+            background: #ff4256;
+            transform: translateY(-125px) rotateX(90deg);
+        }
+
+        .inner:nth-child(5) {
+            background: #ffbe3f;
+            transform: translateZ(125px);
+        }
+
+        .inner:nth-child(6) {
+            transform: translateZ(-125px);
+        }
+
+
+    </style>
+</head>
+<body>
+<div id="scene">
+    <div class="demo">
+        <div class="inner"><h5>张萌棒棒哒</h5></div>
+        <div class="inner"><h5>张萌小仙女</h5></div>
+        <div class="inner"><h5>张萌蠢蠢的</h5></div>
+        <div class="inner"><h5>张萌小可爱</h5></div>
+        <div class="inner"><h5>张萌聪聪的</h5></div>
+        <div class="inner"><h5>张萌胖胖的</h5></div>
+    </div>
+</div>
+
+</body>
+</html>
